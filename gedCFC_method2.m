@@ -136,8 +136,8 @@ evecs = evecs(:,sidx);
 maps  = covT*evecs;
 
 % trough/peak network are components with biggest/smallest eigenvalues
-gammap1 = maps(:,sidx(1));
-gammap2 = maps(:,sidx(end));
+gammap1 = maps(:,1);
+gammap2 = maps(:,end);
 
 % fix sign of map (max is positive)
 [~,maxe] = max(abs(gammap1));
